@@ -8,7 +8,7 @@ bot = telebot.TeleBot(ini.TOKEN)
 KeyBuy = types.ReplyKeyboardMarkup(True,False)
 KeyBuy.row('/Buy')
 
-@bot.message_handler(Commands=['start'])
+@bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id,'Привет! Купи слона!',reply_markup=KeyBuy)
 
