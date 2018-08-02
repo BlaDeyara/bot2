@@ -1,0 +1,14 @@
+certifi==2018.4.16
+chardet==3.0.4
+construct==2.8.8
+gunicorn==19.9.0
+idna==2.7
+ipaddress==1.0.16
+PySocks==1.6.8
+pyTelegramBotAPI==3.6.4
+requests==2.19.1
+six==1.11.0
+socks5==0.2.1
+transitions==0.4.1
+urllib3==1.23
+virtualenv==16.0.0
