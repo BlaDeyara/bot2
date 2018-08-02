@@ -1,7 +1,6 @@
 import telebot
 import ini
 from telebot import types
-from telebot import apihelper
 
 bot = telebot.TeleBot(ini.TOKEN)
 """
@@ -19,4 +18,4 @@ KeyBuy.row('/Buy')
 def start(message):
     bot.send_message(message.chat.id,'Привет! Купи слона!',reply_markup=KeyBuy)
 
-bot.polling()
+bot.polling(none_stop=True)
