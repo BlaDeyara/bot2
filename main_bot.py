@@ -25,7 +25,7 @@ def RepeatAll(message):
     Slon = 'Все говорят: "' + message.text + '", а ты купи слона!'
     bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
 
-@server.route('/' + ini.TOKEN, methods=['POST'])
+@server.route('/bot', methods=['POST'])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     return "!", 200
@@ -34,8 +34,8 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://morning-spire-74999.herokuapp.com/' + ini.TOKEN)
-    return "!", 200
+    bot.set_webhook(url='https://morning-spire-74999.herokuapp.com/bot')
+    return "?", 200
 
 
 if __name__ == "__main__":
