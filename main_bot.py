@@ -25,6 +25,9 @@ def RepeatAll(message):
     Slon = 'Все говорят: "' + message.text + '", а ты купи слона!'
     bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
 
+logger = telebot.logger
+telebot.logger.setLevel(logging.INFO)
+
 @server.route('/bot', methods=['POST'])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
