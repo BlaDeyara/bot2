@@ -16,7 +16,7 @@ KeyBuy.row('/Donate')
 def start(message):
     bot.send_message(message.chat.id,'Привет! Скинь сиськи!',reply_markup=KeyBuy)
 
-@bot.message_handler(commands=['Buy'])
+@bot.message_handler(commands=['Donate'])
 def Buy(message):
     bot.send_message(message.chat.id,'Кинь денег на карту сбер по номеру телефона +79828325600.')
 
