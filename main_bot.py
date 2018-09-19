@@ -20,6 +20,11 @@ def start(message):
 def Buy(message):
     bot.send_message(message.chat.id,'Кинь денег на карту сбер по номеру телефона +79828325600.')
 
+@bot.message_handler(commands=['ID'])
+def Buy(message):
+    bot.send_message(message.chat.id,message.chat.id)
+    
+    
 @bot.message_handler(content_types=["text", "photo"])
 def RepeatAll(message):
     if message.content_type == 'text':
