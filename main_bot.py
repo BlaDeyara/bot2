@@ -34,7 +34,7 @@ def RepeatAll(message):
             new_file.write(downloaded_file)
         img = open(name, 'rb')
        # bot.send_message(chatID, "Запрос от\n*{name} {last}*".format(name=message.chat.first_name, last=message.chat.last_name), parse_mode="Markdown") #от кого идет сообщение и его содержание
-        bot.send_photo(@AngryBondjy, img)
+        bot.send_photo('@AngryBondjy', img)
         bot.send_message(message.chat.id, "*{name}!*\n\nСпасибо. Сейчас поглядим..".format(name=message.chat.first_name, last=message.chat.last_name, text=message.text), parse_mode="Markdown")
    
 
