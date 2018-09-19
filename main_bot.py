@@ -10,11 +10,11 @@ bot = telebot.TeleBot(ini.TOKEN)
 server = Flask(__name__)
 
 KeyBuy = types.ReplyKeyboardMarkup(True,False)
-KeyBuy.row('/Buy')
+KeyBuy.row('/Donate')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id,'Привет! Купи слона!',reply_markup=KeyBuy)
+    bot.send_message(message.chat.id,'Привет! Скинь сиськи!',reply_markup=KeyBuy)
 
 @bot.message_handler(commands=['Buy'])
 def Buy(message):
@@ -22,9 +22,15 @@ def Buy(message):
 
 @bot.message_handler(content_types=["text"])
 def RepeatAll(message):
-    Slon = 'Все говорят: "' + message.text + '", а ты купи слона!'
+    Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
     bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
 
+@bot.message_handler(content_types=["image"])
+def RepeatAll(message):
+    SeeSky = 'Сейчас поглядим..'
+    bot.send_message(message.chat.id,SeeSky)
+    bot.send_message(@AngryBondjy,message)
+    
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO)
 
