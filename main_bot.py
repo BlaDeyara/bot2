@@ -14,7 +14,7 @@ KeyBuy.row('/Donate')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id,'Привет! Скинь сиськи!',reply_markup=KeyBuy)
+    bot.send_message(message.chat.id,'Привет! Скинь сиськи!')
 
 @bot.message_handler(commands=['Donate'])
 def Buy(message):
@@ -29,7 +29,7 @@ def Buy(message):
 def RepeatAll(message):
     if message.content_type == 'text':
         Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
-        bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
+        bot.send_message(message.chat.id,Slon)
     elif message.content_type == 'photo':
         #bot.send_message(message.chat.id,message.chat.id)
         #raw = message.photo.file_id
