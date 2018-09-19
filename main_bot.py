@@ -25,7 +25,7 @@ def RepeatAll(message):
     Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
     bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
 
-@bot.message_handler(content_types=["image"])
+@bot.message_handler(content_types=["photo"])
 def Watch(message):
     SeeSky = 'Сейчас поглядим..'
     bot.send_message(message.chat.id,SeeSky)
