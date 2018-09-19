@@ -26,6 +26,7 @@ def RepeatAll(message):
         Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
         bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
     elif message.content_type == 'photo':
+        bot.send_message(message.chat.id,message.chat.id)
         raw = message.photo.file_id
         name = raw+".jpg"
         file_info = bot.get_file(raw)
