@@ -25,11 +25,11 @@ def RepeatAll(message):
     Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
     bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
 
-#@bot.message_handler(content_types=["image"])
-#def RepeatAll(message):
-#    SeeSky = 'Сейчас поглядим..'
-#    bot.send_message(message.chat.id,SeeSky)
-#    bot.send_message(@AngryBondjy,message)
+@bot.message_handler(content_types=["image"])
+def Watch(message):
+    SeeSky = 'Сейчас поглядим..'
+    bot.send_message(message.chat.id,SeeSky)
+    bot.send_message(@AngryBondjy,message)
     
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO)
