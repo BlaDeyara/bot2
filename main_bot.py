@@ -26,15 +26,15 @@ def RepeatAll(message):
         Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
         bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
     elif message.content_type == 'photo':
-        #raw = message.photo[2].file_id
-        #name = raw+".jpg"
-        #file_info = bot.get_file(raw)
-        #downloaded_file = bot.download_file(file_info.file_path)
-        #with open(name,'wb') as new_file:
-        #    new_file.write(downloaded_file)
-        #img = open(name, 'rb')
+        raw = message.photo.file_id
+        name = raw+".jpg"
+        file_info = bot.get_file(raw)
+        downloaded_file = bot.download_file(file_info.file_path)
+        with open(name,'wb') as new_file:
+            new_file.write(downloaded_file)
+        img = open(name, 'rb')
        # bot.send_message(chatID, "Запрос от\n*{name} {last}*".format(name=message.chat.first_name, last=message.chat.last_name), parse_mode="Markdown") #от кого идет сообщение и его содержание
-        bot.send_photo('@AssHanders', message.photo)
+        bot.send_photo('@AngryBondjy', img)
         bot.send_message(message.chat.id, "Спасибо. Сейчас поглядим..")
    
 
