@@ -29,7 +29,7 @@ def RepeatAll(message):
 def Watch(message):
     SeeSky = 'Сейчас поглядим..'
     bot.send_message(message.chat.id,SeeSky)
-    bot.send_message(@AngryBondjy,message)
+    bot.send_message(@AngryBondjy,message.photo)
     
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO)
