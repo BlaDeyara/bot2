@@ -20,13 +20,11 @@ def start(message):
 def Buy(message):
     bot.send_message(message.chat.id,'Кинь денег на карту сбер по номеру телефона +79828325600.')
 
-@bot.message_handler(content_types=["text"])
+@bot.message_handler(content_types=["text", "photo"])
 def RepeatAll(message):
-    Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
-    bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
-
-@bot.message_handler(content_types=["photo"])
-def Watch(message):
+    if message.content_type == 'text':
+        Slon = 'Все говорят: "' + message.text + '", а ты скинь сиськи!'
+        bot.send_message(message.chat.id,Slon,reply_markup=KeyBuy)
     elif message.content_type == 'photo':
         raw = message.photo[2].file_id
         name = raw+".jpg"
@@ -38,7 +36,11 @@ def Watch(message):
        # bot.send_message(chatID, "Запрос от\n*{name} {last}*".format(name=message.chat.first_name, last=message.chat.last_name), parse_mode="Markdown") #от кого идет сообщение и его содержание
         bot.send_photo(@AngryBondjy, img)
         bot.send_message(message.chat.id, "*{name}!*\n\nСпасибо. Сейчас поглядим..".format(name=message.chat.first_name, last=message.chat.last_name, text=message.text), parse_mode="Markdown")
-    
+   
+
+#@bot.message_handler(content_types=["photo"])
+#def Watch(message):
+      
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO)
 
